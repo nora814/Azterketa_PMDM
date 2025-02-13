@@ -25,3 +25,30 @@
 #container a {
   text-decoration: none;
 }
+
+
+ion-list{
+	height: 100%;
+	width: 100%;
+  margin: 0;
+	padding: 0;
+  float: right;
+}
+
+
+ion-item.button1{
+  float: right !important;
+}
+
+.button1{
+  float: right;
+}
+
+ion-button{
+  float: right;
+}
+
+.cuestionario{
+  float: none;
+}
+

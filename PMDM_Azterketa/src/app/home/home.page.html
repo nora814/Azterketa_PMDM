@@ -1,15 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Galdetegia Hau konponente baten bitartez egin
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-goiburukoa></app-goiburukoa>
 
 <ion-content [fullscreen]="true">
   <!-- Irakurri galdetegiko galdera guztiak-->
-  <ion-list>
+  <div>
     <ion-item>
+      <ion-list>
+        <ion-item>
+          <ion-img src="../assets/icon/volkswagen.jpg"></ion-img> <ion-button class="button1" (click)="Erantzun()"  expand="block" color="light">
+            RESPONDER
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-img src="../assets/icon/apple.jpg"></ion-img> <ion-button class="button1" (click)="Erantzun()"  expand="block" color="light">
+            RESPONDER
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-img src="../assets/icon/Shell.jpg"></ion-img> <ion-button class="button1" (click)="Erantzun()"  expand="block" color="light">
+            RESPONDER
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-img src="../assets/icon/starbucks.jpg"></ion-img> <ion-button class="button1" (click)="Erantzun()"  expand="block" color="light">
+            RESPONDER
+          </ion-button>
+        </ion-item>
+        <ion-button class="cuestionario" (click)="Guardar()"  expand="block" color="light">
+          GUARDAR CUESTIONARIO
+        </ion-button>
+      </ion-list>
+      
+     
       <!-- logotipoa gehitu -->
       <!-- ion-badge gehitu galdera asmatzekotan, saiakera zenbatzailea eta erakutsi okerrak izan diren saiakera kopurua
       -- 1-Asmatzen bada: "success" kolorea jarri eta erakutsi pantailako eskuineko partean (slot)
@@ -20,7 +41,10 @@
       <!-- Gehitu botoiaren funtzionalitatea-->
 
     </ion-item>
-  </ion-list>
-  <!--Galdetagiaren botoia gehitu-->
+  
+    <!--Galdetagiaren botoia gehitu-->
 
+
+  </div>
+      
 </ion-content>

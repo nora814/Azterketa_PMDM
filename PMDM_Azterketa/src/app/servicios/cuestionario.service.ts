@@ -3,16 +3,33 @@ import { AlertController } from '@ionic/angular';
 import { IPregunta } from './../interfaces/interfaces';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CuestionarioService {
+  private jsonUrl = 'assets/datos/datos.json';
+  Marcas: IPregunta[] = [];
   // Array bat gordetzeko json-ean dauden galdera guztiak. Gogoratu array-a abiarazten arazoak ekiditzeko
   // Gehitu beharrezkoak diren konponenteak eta zerbitzuak
-  constructor() {
+  constructor(private http: HttpClient) {
     //Datuak kargatu
   }
+  cargarMarcas(): Observable<IPregunta[]> {
+    return this.http.get<{ usuarios: IPregunta[] }>(this.jsonUrl).pipe(
+      map(response => {
+        this.Marcas = response.usuarios; 
+        return this.Marcas;
+      })
+    );
+  }
+  obtenerUsuarios(): IPregunta[] {
+    return this.Marcas;
+  }
+}
+
 
   // IPregunta array-a bueltatuko duen metodoa, hau da, galdetegiko galdera guztiak array batean
 
@@ -32,4 +49,4 @@ export class CuestionarioService {
 
 
 
-}
+
